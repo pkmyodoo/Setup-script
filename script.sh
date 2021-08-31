@@ -8,7 +8,7 @@ echo -e "Installation of Virtualbox"
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian bionic contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
 sudo apt update
-sudo apt install virtualbox-6.1
+sudo apt install virtualbox-6.1 -y
 
 echo -e "Installation of Git & Snap"
 sudo apt-get install git -y && sudo apt install snapd -y
