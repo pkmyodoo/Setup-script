@@ -16,9 +16,6 @@ sudo apt-get install git -y && sudo apt install snapd -y
 echo -e "Installation of Pycharm IDE"
 sudo snap install pycharm-community --classic -y
 
-echo -e "Installation of Spotify"
-sudo snap install spotify
-
 echo -e "Downloading and installing Google Chrome"
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
