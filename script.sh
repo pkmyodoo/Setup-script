@@ -5,7 +5,10 @@ sudo apt update -y
 sudo apt install wget -y
 
 echo -e "Installation of Virtualbox"
-sudo apt install virtualbox virtualbox-ext-pack -y
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian bionic contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+sudo apt update
+sudo apt install virtualbox-6.1
 
 echo -e "Installation of Git & Snap"
 sudo apt-get install git -y && sudo apt install snapd -y
@@ -17,8 +20,8 @@ echo -e "Installation of Spotify"
 sudo snap install spotify
 
 echo -e "Downloading and installing Google Chrome"
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -y
-sudo dpkg -i google-chrome-stable_current_amd64.deb -y
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
 sudo apt-get install -f
 
 echo -e "Removing Snap"
