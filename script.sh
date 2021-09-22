@@ -28,8 +28,8 @@ echo -e "KeePass installation"
 sudo apt-add-repository ppa:jtaylor/keepass -y && sudo apt-get update -y && sudo apt-get install keepass2 -y
 sudo apt-get update -y && sudo apt-get install xdotool -y
 
-read -p "Do you want to create new SSH Public Key? [Y/N]: " SSH_PK
-if [ $SSH_PK = Y ]; then
+read -r -p "Do you want to create new SSH Public Key? [Y/N]: " SSH_PK
+if [ "$SSH_PK" = Y ]; then
   echo -e "Generating SSH Public Key for git"
   ssh-keygen
 fi
